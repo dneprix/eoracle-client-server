@@ -59,7 +59,7 @@ func (s *server) Start(ctx context.Context) error {
 		go s.worker(ctx, &wg, readCommandChan)
 	}
 
-	// Start read worker goroutines
+	// Start write worker goroutines
 	for i := 0; i < s.writeWorkers; i++ {
 		wg.Add(1)
 		go s.worker(ctx, &wg, writeCommandChan)

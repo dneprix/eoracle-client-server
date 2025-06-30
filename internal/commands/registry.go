@@ -121,9 +121,11 @@ func NewCommandRegistry() CommandRegistry {
 		},
 		Handler: func(cmd Command, store storage.Storage, out output.Output) error {
 			allItems := store.GetAll()
+			writeData := ""
 			for _, item := range allItems {
-				out.Write(fmt.Sprintf("%s = %s\n", item.Key, item.Value))
+				writeData += fmt.Sprintf("%s = %s\n", item.Key, item.Value)
 			}
+			out.Write(writeData)
 			log.Printf("Retrieved all items: %d items", len(allItems))
 			return nil
 		},
