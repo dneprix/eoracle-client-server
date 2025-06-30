@@ -66,7 +66,6 @@ A scalable client-server application built in Go that implements an ordered map 
 > get user1
 > getall
 > delete user1
-> quit
 ```
 
 ## Configuration
