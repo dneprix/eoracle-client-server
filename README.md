@@ -31,8 +31,6 @@ A scalable client-server application built in Go that implements an ordered map 
 
 ## Quick Start
 
-### Using Docker Compose (Recommended)
-
 1. **Build binaries**:
    ```bash
    make build   
